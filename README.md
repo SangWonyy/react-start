@@ -4,7 +4,7 @@
 ### 리액트를 기반으로 한 사이드 프로젝트 진행 전 연습
 
 ## 사용 스택
-> react.js, react hooks, next.js, react-bootstrap
+> react.js, react hooks, next.js, react-bootstrap, typescript
  
 ## 프로젝트 컨셉
 > 간단한 블로그 형식의 프로젝트
