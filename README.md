@@ -16,3 +16,16 @@
 --------
 angular에서 react를 다시 배워보기 위한 첫번째 단계.
 
+--------
+
+###History 
+1. create next framework
+2. change javacript to typescript
+3. apply prettier && tslint
+   - create tslint.json and prettierrc
+4. install styled component
+   - DOC : https://styled-components.com/docs/api#typescript
+   - npm i -D @types/styled-components styled-normalize ( styled-normalize : 브라우저마다 다르게 보이는 css 초기화)
+     - 스타일-테마 모음 : src/styles/theme.ts 
+     - 스타일-타입정의 모음 : src/styles/styled.d.ts
+     - 전역-스타일 모음 : src/styles/global-style.ts
