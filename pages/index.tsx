@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import {useState} from "react";
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import { useState } from 'react';
 
 export default function Home() {
-  const [text, setText] = useState<string>("typesciprt Test");
+  const [text, setText] = useState<string>('typesciprt Test');
   return (
     <div className={styles.container}>
       <Head>
@@ -11,9 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        {text}
-      </main>
+      <main>{text}</main>
 
       <footer className={styles.footer}>
         <a
@@ -21,10 +19,9 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
-  )
+  );
 }
