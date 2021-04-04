@@ -24,7 +24,7 @@ export default function ItemList() {
       {dataList.map((data) => {
         return (
           <>
-            <img src={data.image_link} alt="이미지 없음" />;
+            <img src={data.image_link} alt="이미지 없음" />
           </>
         );
       })}
