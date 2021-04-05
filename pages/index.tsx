@@ -5,7 +5,6 @@ import ItemList from '../src/components/home/itemList';
 
 export default function Home() {
   const [text, setText] = useState<string>('typesciprt Test');
-
   return (
     <div>
       <Head>

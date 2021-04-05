@@ -4,12 +4,13 @@
 ### 리액트를 기반으로 한 사이드 프로젝트 진행 전 연습
 
 ## 사용 스택
-> react.js, react hooks, next.js, typescript, styled-component, react-bootstrap, 
+> react.js, react hooks, next.js, typescript, styled-component, chakra 
  
 ## 프로젝트 컨셉
 > 아이디어스 홈페이지 클론 프로젝트
-> > 1. 전반적인 디자인 클론
-> > 2. open API data fetch
+> > 1. 유튜브 강의를 통한 학습
+> > 2. 전반적인 아이디어스 디자인 클론
+> > 3. 반복학습
  
 --------
 angular에서 react를 다시 배워보기 위한 첫번째 단계.
