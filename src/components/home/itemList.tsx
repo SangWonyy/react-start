@@ -3,20 +3,18 @@ import axios from 'axios';
 import styled from 'styled-components';
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Spinner } from '@chakra-ui/react';
 import Link from 'next/link';
+import { SimpleGrid, Box } from '@chakra-ui/react';
 
 export default function ItemList() {
   const [dataList, setDataList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const apiUrl = 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
-  const ImgDiv = styled.div`
-    display: flex;
-    flex-wrap: wrap;
+  const Img = styled.img`
+    margin: 0 auto;
   `;
-  const SpinDiv = styled.div`
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  const SpinDiv = styled(SimpleGrid)`
+    text-align: center;
   `;
 
   async function getData() {
@@ -44,15 +42,17 @@ export default function ItemList() {
               <Spinner />
             </SpinDiv>
           ) : (
-            <ImgDiv>
+            <SimpleGrid columns={[3]} spacing="40px">
               {dataList.map((data) => {
                 return (
                   <Link href={`/view/${data.id}`}>
-                    <img key={data.id} src={data.image_link} alt="이미지 없음" />
+                    <Box>
+                      <Img key={data.id} src={data.image_link} alt="이미지 없음" />
+                    </Box>
                   </Link>
                 );
               })}
-            </ImgDiv>
+            </SimpleGrid>
           )}
         </TabPanel>
         <TabPanel>
