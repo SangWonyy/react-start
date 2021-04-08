@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Box, SimpleGrid, Spinner, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
+import Link from 'next/link';
 
 const TopContainer = styled.div`
   height: 60px;
@@ -18,9 +20,24 @@ const TextBox = styled.div`
 
 export default function Top() {
   return (
-    <TopContainer>
-      <Img src="/assets/shiba.png" alt="이미지 못찾음" />
-      <TextBox>React Shopping</TextBox>
-    </TopContainer>
+    <div>
+      <TopContainer>
+        <Img src="/assets/shiba.png" alt="이미지 못찾음" />
+        <TextBox>React Shopping</TextBox>
+      </TopContainer>
+      <Tabs>
+        <TabList>
+          <Link href="/">
+            <Tab>Home</Tab>
+          </Link>
+          <Link href="/view/tab/about">
+            <Tab>about</Tab>
+          </Link>
+          <Link href="/where">
+            <Tab>Friend</Tab>
+          </Link>
+        </TabList>
+      </Tabs>
+    </div>
   );
 }

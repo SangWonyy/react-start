@@ -1,4 +1,4 @@
-import Item from '../../src/components/view/Item';
+import Item from '../../../src/components/view/Item';
 import axios from 'axios';
 import Head from 'next/head';
 const GetItem = ({ item }) => {
