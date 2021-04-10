@@ -17,7 +17,7 @@ const SpinDiv = styled(SimpleGrid)`
 export default function ItemList() {
   const [dataList, setDataList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const apiUrl = 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   async function getData() {
     const fetchData = await axios.get(apiUrl);

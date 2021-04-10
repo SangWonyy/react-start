@@ -1,7 +1,7 @@
 import Item from '../../../src/components/view/Item';
 import axios from 'axios';
 import Head from 'next/head';
-const GetItem = ({ item }) => {
+const GetItem = ({ item, name }) => {
   return (
     <>
       {item && (
@@ -10,6 +10,7 @@ const GetItem = ({ item }) => {
             <title>{item.name}</title>
             <meta name="description" content={item.description} />
           </Head>
+          {name} 환경 입니다.
           <Item item={item} />
         </>
       )}
@@ -27,7 +28,8 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      item: data
+      item: data,
+      name: process.env.name
     }
   };
 }

@@ -36,3 +36,7 @@ yarn-error.log*
 #lock
 .package-lock.json
 .gitignore
+
+#env
+.env.build
+.env.development
