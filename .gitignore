@@ -29,6 +29,8 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.env.build
+.env.development
 
 # vercel
 .vercel
@@ -37,6 +39,3 @@ yarn-error.log*
 .package-lock.json
 .gitignore
 
-#env
-.env.build
-.env.development
