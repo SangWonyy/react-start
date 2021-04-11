@@ -39,7 +39,7 @@ export default function ItemList() {
         <SimpleGrid columns={[3]} spacing="40px">
           {dataList.map((data) => {
             return (
-              <Link href={`/view/${data.id}`}>
+              <Link href={`/view/detail/${data.id}`}>
                 <Box>
                   <Img key={data.id} src={data.image_link} alt="이미지 없음" />
                 </Box>

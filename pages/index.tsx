@@ -1,10 +1,7 @@
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
-
 import ItemList from '../src/components/home/itemList';
 
-export default function Home() {
-  const [text, setText] = useState<string>('typesciprt Test');
+export default function Home(): JSX.Element {
   return (
     <div>
       <Head>

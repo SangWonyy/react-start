@@ -14,12 +14,14 @@ const Container = styled.div`
 const Img = styled.img`
   width: 10%;
   height: 10%;
+  padding-right: 10px;
 `;
 
-export default function Error404() {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function Error404(): JSX.Element {
   return (
     <Container>
-      <Img src="/assets/surprised.svg" alt="이미지 찾지 못했어요" />
+      <Img src="/assets/main/surprised.svg" alt="이미지 찾지 못했어요" />
       여기는 어디지?!! 404 ERROR ...
     </Container>
   );

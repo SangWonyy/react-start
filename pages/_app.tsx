@@ -9,7 +9,7 @@ const DivContainer = styled.div`
   margin-right: 20%;
 `;
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <ChakraProvider>
       <DivContainer>
