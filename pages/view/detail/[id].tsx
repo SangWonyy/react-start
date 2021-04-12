@@ -1,6 +1,7 @@
 import Item from '../../../src/components/view/Item';
 import axios from 'axios';
 import Head from 'next/head';
+import { GetServerSideProps } from 'next';
 
 interface Props {
   props: {
@@ -9,18 +10,18 @@ interface Props {
   };
 }
 
-const GetItem = ({ item, name }): JSX.Element => {
+const GetItem = (props: { item: { name: string; description: string }; name: string }): JSX.Element => {
   debugger;
   return (
     <>
-      {item && (
+      {props.item && (
         <>
           <Head>
-            <title>{item.name}</title>
-            <meta name="description" content={item.description} />
+            <title>{props.item.name}</title>
+            <meta name="description" content={props.item.description} />
           </Head>
-          {name} 환경 입니다.
-          <Item item={item} />
+          {props.name} 환경 입니다.
+          <Item item={props.item} />
         </>
       )}
     </>
@@ -28,8 +29,7 @@ const GetItem = ({ item, name }): JSX.Element => {
 };
 
 export default GetItem;
-
-export async function getServerSideProps(context): Promise<Props> {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const id = context.params.id;
   const apiUrl = `http://makeup-api.herokuapp.com/api/v1/products/${id}.json`;
   const res = await axios.get(apiUrl);
@@ -41,4 +41,4 @@ export async function getServerSideProps(context): Promise<Props> {
       name: process.env.name
     }
   };
-}
+};
